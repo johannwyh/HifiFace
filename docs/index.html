@@ -20,10 +20,10 @@
 <div class="w3-container" id="paper">
     <div class="w3-content" style="max-width:850px">
   
-    <h2 align="center" id="title"><b>Dynamic Neural Radiance Fields for Monocular 4D Facial Avatar Reconstruction</b></h2>
+    <h2 align="center" id="title"><b>RealFace: 3D Shape and Semantic Prior Guided High Fidelity Face Swapping</b></h2>
     <br/>
     <!-- <p align="center" id="title">Conference Name (NAME), YYYY.</p> -->
-
+<!--
     <p align="center" class="center_text" id="authors">
         <a target="_blank" href="http://www.niessnerlab.org/members/guy_gafni/profile.html">Guy Gafni</a><sup>1</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -40,7 +40,7 @@
         &nbsp; &nbsp; &nbsp;
         <sup>2</sup>Facebook Reality Labs
     </p>
-
+-->
     <br>
 <!--         <h4 align="center" id="title"><b>Submit to our ScanRefer Localization Benchmark <a href="http://kaldir.vc.in.tum.de/scanrefer_benchmark/" target="__blank">here</a>!</b></h4>
 
@@ -49,32 +49,39 @@
         
         <h3 class="w3-left-align" id="video"><b>Introduction</b></h3>
         <p>
-            We present dynamic neural radiance fields for modeling the appearance and dynamics of a human face.
+            In this work, we propose a high fidelity face swap- ping method, called RealFace, 
             
-            Digitally modeling and reconstructing a talking human is a key building-block for a variety of applications.
-            Especially, for telepresence applications in AR or VR, a faithful reproduction of the appearance including novel viewpoint or head-poses is required.
+            which can well preserve the face shape of the source face and generate photo-realistic results. 
             
-            In contrast to state-of-the-art approaches that model the geometry and material properties explicitly, or are purely image-based, we introduce an implicit representation of the head based on scene representation networks.
+            Unlike other existing face swapping works that only use face recognition model to keep the identity similarity, 
             
-            To handle the dynamics of the face, we combine our scene representation network with a low-dimensional morphable model which provides explicit control over pose and expressions.
+            we propose 3D shape-aware identity to control the face shape with the geometric supervision from 3DMM and 3D face reconstruction method. 
             
-            We use volumetric rendering to generate images from this hybrid representation and demonstrate that such a dynamic neural scene representation can be learned from monocular input data only, without the need of a specialized capture setup.
+            Meanwhile, we introduce the Semantic Facial Fusion module to optimize the combination of encoder and decoder features 
             
-            In our experiments, we show that this learned volumetric representation allows for photo-realistic image generation that surpasses the quality of state-of-the-art video-based reenactment methods.
+            and make adaptive blending, which makes the results more photo-realistic. 
+            
+            Extensive experiments on wild faces demonstrate that our method can preserve better identity, especially on the face shape, 
+            
+            and can generate more photo-realistic results than previous state-of-the-art methods. 
 
         </p>
-
+        
         <h3 class="w3-left-align" id="video"><b>Video</b></h3>
         <p>
         <!--         <iframe width="850" height="480" src="https://www.youtube.com/embed/T9J5t-UEcNA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          -->        
-            <iframe width="850" height="480" src="vid.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="850" height="480" src="600_505.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p/>
 
 
-        <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
+    <!--    <h3 class="w3-left-align" id="publication"><b>Publication</b></h3> -->
+
         <!-- European Conference on Computer Vision (ECCV), 2020. <br/> -->
         <!-- <a href="davezchen_eccv2020_scanrefer.pdf" target="__blank">Paper</a>  -->
+
+
+    <!--
         Paper - <a href="https://arxiv.org/pdf/2012.03065" target="__blank">ArXiv - pdf</a> (<a href="https://arxiv.org/abs/2012.03065" target="__blank">abs</a>)  | <a href="https://github.com/gafniguy/4D-Facial-Avatars" target="__blank">GitHub</a>
         <center>
             <a href="https://arxiv.org/pdf/2012.03065" target="__blank"><img src="paper_preview.PNG" style="max-width:80%" /></a>
@@ -93,11 +100,13 @@
               primaryClass={cs.CV}
         }
         </pre>
-
+    -->
         
         <h3 class="w3-left-align" id="dataset"><b>Dataset</b></h3>
 
-        If you would like to access our videos, in order to compare to our method, please contact us directly by email: guy.gafni at tum.de
+        We have prepared 1000 fake videos of well-known forgery detection dataset FaceForensics++. We strictly follow the source and target pair settings of FF++. Besides, we also generated 10k frames of FF++ videos for quantitative test, which is widely adopted by recent face swapping research. <br>
+        If you would like to access our videos, or our fake images test set, in order to compare to our method, please contact us directly by email: wang_yuhan@zju.edu.cn
+        
     </div>
 
 

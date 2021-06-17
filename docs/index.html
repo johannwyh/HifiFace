@@ -141,10 +141,41 @@
         
     <br>
     
-    <h3 class="w3-left-align" id="dataset"><b>Dataset</b></h3>
+    <h3 class="w3-left-align" id="dataset"><b>FaceForensics++</b></h3>
     <hr/>
-        We have prepared 1000 fake videos of well-known forgery detection dataset FaceForensics++. We strictly follow the source and target pair settings of FF++. Besides, we also generated 10k frames of FF++ videos for quantitative test, which is widely adopted by recent face swapping research. <br>
-        If you would like to access our videos, or our fake images test set, in order to compare to our method, please contact us directly by email: wang_yuhan@zju.edu.cn or cxxuchen@tencent.com
+    We have prepared 1000 fake videos of well-known forgery detection dataset FaceForensics++. We strictly follow the source and target pair settings of FF++. Besides, we also generated 10k frames of FF++ videos for quantitative test, which is widely adopted by recent face swapping research. <br>
+    <br>
+    If you would like to access our FF++ videos, you can download them from either Google Drive or Baidu Netdisk. <br>
+    <br>
+
+        <h5 class="w3-left-align">Baidu Netdisk</h5>
+        <ul>
+            <li>Download all six splices from <a href="https://pan.baidu.com/s/1J_ZYWPI_-2CVUzXoL3sXjg">this link</a> with extraction code <b>nszb</b></li>
+            <li>
+                Concat these splices to form a compressed file and unzip it:
+                <pre>
+cat FF++_HifiFace_* >FF++_HifiFace.tar.gz
+tar -xzvf FF++_HifiFace.tar.gz
+                </pre>
+            </li>
+        </ul>
+        
+        <h5 class="w3-left-align">Google Drive</h5>
+        <ul>
+            <li>Download the compressed file from <a href="https://drive.google.com/file/d/10Jy9iEJHkNnkvpBA32246ViA9aHmv8KT/view?usp=sharing">this link</a> </li>
+            <li>
+                Unzip this file:
+                <pre>
+tar -xzvf FF++_HifiFace.tar.gz                    
+                </pre>
+            </li>
+        </ul>
+    
+    The md5sum of the compressed file is 5b596ac8025c25f69f24fd7783ec8133. It contains 1k manipulated videos and a config file. The config file indicates which frame of the original video is used as the identity's source image. The frame is numbered from zero.
+    <br>
+    If you encounter any problems or have anything else to ask, please contact us directly by email: 
+    <a href="wang_yuhan@zju.edu.cn">wang_yuhan@zju.edu.cn</a> or 
+    <a href="cxxuchen@tencent.com">cxxuchen@tencent.com</a>
 
     </div>
 
